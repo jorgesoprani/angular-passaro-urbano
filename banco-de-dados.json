@@ -65,8 +65,8 @@
 		{
 			"id": 5,
 			"categoria": "diversao",
-			"titulo": "Kart",
-			"descricao_oferta": "Bateria de Kart de 30 minutos.",
+			"titulo": "Corrida de Kart",
+			"descricao_oferta": "Bateria de Kart de 30 minutos",
 			"anunciante": "Speed Kart",
 			"valor": 54.90,
 			"destaque": false,
