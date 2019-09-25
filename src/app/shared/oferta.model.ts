@@ -8,3 +8,8 @@ export class Oferta {
     public destaque: boolean;
     public imagens: Array<object>
 }
+
+export class ComoUsar {
+    public id: number;
+    public descricao: string;
+}
