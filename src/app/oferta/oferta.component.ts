@@ -20,5 +20,4 @@ export class OfertaComponent implements OnInit {
           this.oferta = oferta;
       });
   }
-
 }
