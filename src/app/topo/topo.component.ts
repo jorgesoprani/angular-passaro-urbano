@@ -3,8 +3,7 @@ import { OfertasService } from '../ofertas.service';
 import { Observable } from 'rxjs/Observable'
 import { Oferta } from '../shared/oferta.model';
 import { Subject } from 'rxjs/Subject';
-import 'rxjs/add/operator/switchMap'
-import 'rxjs/add/operator/debounceTime'
+import '../utils/rxjs-extensions';
 
 @Component({
   selector: 'app-topo',
@@ -20,13 +19,16 @@ export class TopoComponent implements OnInit {
   ngOnInit() {
     this.ofertas = this.subjectPesquisa
       .debounceTime(1000)
+      .distinctUntilChanged()
       .switchMap((valor: string) => {
-        return this.ofertasService.pesquisaOfertas(valor);
+        if(valor == '')
+          return Observable.of<Oferta[]>([]);
+        else
+          return this.ofertasService.pesquisaOfertas(valor);
+      })
+      .catch((err: any) => {
+        return Observable.of<Oferta[]>([]);
       });
-
-    this.ofertas.subscribe(
-      (ofertas: Oferta[]) => console.log(ofertas)
-    );
   }
 
   public pesquisar(valor: string) : void{

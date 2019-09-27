@@ -12,7 +12,9 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { OfertaComponent } from './oferta/oferta.component';
 import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
-import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component'
+import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
+import { DescricaoReduzidaPipe } from './utils/descricao-reduzida.pipe';
+import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component'
     DiversaoComponent,
     OfertaComponent,
     ComoUsarComponent,
-    OndeFicaComponent
+    OndeFicaComponent,
+    DescricaoReduzidaPipe,
+    OrdemCompraComponent
   ],
   imports: [
     BrowserModule,
