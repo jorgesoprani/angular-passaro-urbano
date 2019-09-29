@@ -3,10 +3,10 @@
     margin-bottom: 50px;
 }
 
-.ng-touched.ng-invalid[ngModel] {
+input.ng-touched.ng-invalid, select.ng-touched.ng-invalid {
     border: 1px solid red;
 }
 
-.ng-touched.ng-valid[ngModel] {
+input.ng-touched.ng-valid, select.ng-touched.ng-valid {
     border: 1px solid green;
 }

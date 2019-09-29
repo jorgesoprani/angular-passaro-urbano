@@ -1,7 +1,7 @@
 import { Http, Response } from '@angular/http';
-import { Oferta, ComoUsar } from './shared/oferta.model';
+import { Oferta, ComoUsar } from '../shared/oferta.model';
 import { Injectable } from '@angular/core';
-import { URL_API } from './app.api';
+import { URL_API } from '../app.api';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';

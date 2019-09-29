@@ -23,7 +23,8 @@
             </ul>
         </div>
         <div class="col-md-2">
-            <a href="#"><img src="/assets/carrinho.png" /></a>
+            <a routerLink="ordem-compra-2" ><img src="/assets/carrinho.png" /></a>
+            {{ carrinhoService.exibirItens().length }}
         </div>
       </div>
     </div>

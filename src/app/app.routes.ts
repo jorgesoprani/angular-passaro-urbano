@@ -6,6 +6,7 @@ import { OfertaComponent } from './oferta/oferta.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
+import { OrdemCompra2Component } from './ordem-compra-2/ordem-compra-2.component';
 
 export const ROUTES: Routes = [
     { path: '', component: HomeComponent },
@@ -16,5 +17,6 @@ export const ROUTES: Routes = [
         { path: 'onde-fica', component: OndeFicaComponent },
         { path: 'como-usar', component: ComoUsarComponent },
     ] },
-    { path: 'ordem-compra', component: OrdemCompraComponent}
+    { path: 'ordem-compra', component: OrdemCompraComponent },
+    { path: 'ordem-compra-2', component: OrdemCompra2Component }
 ]

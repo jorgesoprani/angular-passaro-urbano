@@ -14,9 +14,7 @@
         </div>
 
         <div class="thumbnails">
-          <img [src]="oferta.imagens[1].url" />
-          <img [src]="oferta.imagens[2].url" />
-          <img [src]="oferta.imagens[3].url" />
+          <img *ngFor="let imagem of oferta.imagens | slice:1" [src]="imagem.url" />
         </div>
       </div>
 
@@ -36,7 +34,11 @@
 
         <div class="row">
           <div class="col text-center">
-            <button type="button" class="btn btn-warning btn-lg">Adicionar ao carrinho</button>
+            <button 
+              type="button" 
+              class="btn btn-warning btn-lg"
+              (click)="adicionarCarrinho()"
+            >Adicionar ao carrinho</button>
           </div>
         </div>
           
